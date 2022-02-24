@@ -1,5 +1,7 @@
 package net.zerotoweb.api.member.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  * packageName: net.zerotoweb.api.member.service
  * fileName   : MemberServiceImpl
@@ -11,5 +13,51 @@ package net.zerotoweb.api.member.service;
  * ================================
  * 2022-02-14   HAJINHEE    최초 생성
  */
-public class MemberServiceImpl {
+@Service
+public class MemberServiceImpl implements MemberService{
+
+    @Override
+    public String membershiplist() {
+        return null;
+    }
+
+    @Override
+    public String membershipinformation() {
+        return null;
+    }
+
+    @Override
+    public String checkthelist() {
+        return null;
+    }
+
+    @Override
+    public String registertosendemails() {
+        return null;
+    }
+
+    @Override
+    public String savingmoneylist() {
+        return null;
+    }
+
+    @Override
+    public String checkthedetailsofthesavings() {
+        return null;
+    }
+
+    @Override
+    public String calc() {
+        return null;
+    }
+
+    @Override
+    public String bmi() {
+        return null;
+    }
+
+    @Override
+    public String grade() {
+        return null;
+    }
 }
