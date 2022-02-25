@@ -1,5 +1,8 @@
 package net.zerotoweb.api.member.service;
 
+import net.zerotoweb.api.member.domain.CalcDTO;
+import net.zerotoweb.api.member.domain.MemberDTO;
+
 /**
  * packageName: net.zerotoweb.api.member.service
  * fileName   : MemberService
@@ -12,14 +15,12 @@ package net.zerotoweb.api.member.service;
  * 2022-02-14   HAJINHEE    최초 생성
  */
 public interface MemberService {
-    String membershiplist();
-    String membershipinformation();
-    String checkthelist();
-    String registertosendemails();
-    String savingmoneylist();
-    String checkthedetailsofthesavings();
-    String calc();
-    String bmi();
-    String grade();
 
+    String calc(CalcDTO calc);
+
+    String bmi(MemberDTO bmi);
+
+    String grade(MemberDTO grade);
+
+    String login(MemberDTO login);
 }

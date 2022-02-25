@@ -17,7 +17,6 @@ import org.springframework.stereotype.Component;
 @Data
 @Component
 public class MemberDTO {
-
     private String userId;
     private String name;
     private double height;
@@ -25,5 +24,11 @@ public class MemberDTO {
     private String phone;
     private double weight;
     private String regdate;
+
+    private String id;
+    private String password;
+    private int kor;
+    private int eng;
+    private int math;
 
 }
