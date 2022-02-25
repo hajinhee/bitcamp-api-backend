@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.*;
 public class MemberController {
     private final MemberService service;
 
-    @GetMapping("/bmi")
+    @PostMapping("/bmi")
     public String getBmi(@RequestBody MemberDTO member){
         System.out.println("리액트에서 넘어온 이름: " +member.getName());
         System.out.println("리액트에서 넘어온 키: " +member.getHeight());
@@ -31,7 +31,7 @@ public class MemberController {
         return "BMI는 정상";
     }
 
-    @GetMapping("/grade")
+    @PostMapping("/grade")
     public String getGrade(@RequestBody MemberDTO member){
         System.out.println("리액트에서 넘어온 이름: " );
         System.out.println("리액트에서 넘어온 키: " );
@@ -39,7 +39,7 @@ public class MemberController {
         return "BMI는 정상";
     }
 
-    @GetMapping("/calc")
+    @PostMapping("/calc")
     public String calc(@PathVariable String name,
                          @PathVariable double height,
                          @PathVariable double weight){
@@ -49,7 +49,7 @@ public class MemberController {
         return "BMI는 정상";
     }
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public String login(@PathVariable String name,
                          @PathVariable double height,
                          @PathVariable double weight){
