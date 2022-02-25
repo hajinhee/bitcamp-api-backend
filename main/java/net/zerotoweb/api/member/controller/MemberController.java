@@ -19,11 +19,28 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/member")
 public class MemberController {
     private final MemberService service;
 
-    @GetMapping("/member/bmi/{name}/{height}/{weight}")
-    public String getBmi(@PathVariable String name,
+    @GetMapping("/bmi")
+    public String getBmi(@RequestBody MemberDTO member){
+        System.out.println("리액트에서 넘어온 이름: " +member.getName());
+        System.out.println("리액트에서 넘어온 키: " +member.getHeight());
+        System.out.println("리액트에서 넘어온 몸무게: " +member.getWeight());
+        return "BMI는 정상";
+    }
+
+    @GetMapping("/grade")
+    public String getGrade(@RequestBody MemberDTO member){
+        System.out.println("리액트에서 넘어온 이름: " );
+        System.out.println("리액트에서 넘어온 키: " );
+        System.out.println("리액트에서 넘어온 몸무게: " );
+        return "BMI는 정상";
+    }
+
+    @GetMapping("/calc")
+    public String calc(@PathVariable String name,
                          @PathVariable double height,
                          @PathVariable double weight){
         System.out.println("리액트에서 넘어온 이름: " +name);
@@ -32,4 +49,13 @@ public class MemberController {
         return "BMI는 정상";
     }
 
+    @GetMapping("/login")
+    public String login(@PathVariable String name,
+                         @PathVariable double height,
+                         @PathVariable double weight){
+        System.out.println("리액트에서 넘어온 이름: " +name);
+        System.out.println("리액트에서 넘어온 키: " +height);
+        System.out.println("리액트에서 넘어온 몸무게: " +weight);
+        return "BMI는 정상";
+    }
 }
