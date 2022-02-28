@@ -63,7 +63,7 @@ public class MemberServiceImpl implements MemberService{
         int sum = kor+eng+math;
         int avg = sum/3;
         String pass = (avg>=80) ? "합격" : "불합격";
-        return String.format("%s님 국어점수: %d, 영어점수: %d, 수학점수: %d 평균 %d점으로 %s입니다.",
+        return String.format("%s님 성적표\n국어점수: %d\n 영어점수: %d\n 수학점수: %d\n 평균 %d점으로 %s입니다.",
                 name, kor, eng, math, avg, pass);
     }
 
